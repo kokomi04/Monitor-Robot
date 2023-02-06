@@ -1,0 +1,451 @@
+﻿*MANUAL
+Input #1,CCMD2$
+'Ovrd
+If CCMD2$="3Ovrd" Then
+Ovrd 3
+EndIf
+If CCMD2$="5Ovrd" Then
+Ovrd 5
+EndIf
+If CCMD2$="10Ovrd" Then
+Ovrd 10
+EndIf
+If CCMD2$="15Ovrd" Then
+Ovrd 15
+EndIf
+If CCMD2$="20Ovrd" Then
+Ovrd 20
+EndIf
+If CCMD2$="30Ovrd" Then
+Ovrd 30
+EndIf
+'MOV X
+If CCMD2$="1X+" Then
+P1 = P_Curr
+P1.X = P1.X + 1
+Mov P1
+EndIf
+If CCMD2$="2X+" Then
+P1 = P_Curr
+P1.X = P1.X + 2
+Mov P1
+EndIf
+If CCMD2$="3X+" Then
+P1 = P_Curr
+P1.X = P1.X + 3
+Mov P1
+EndIf
+If CCMD2$="5X+" Then
+P1 = P_Curr
+P1.X = P1.X + 5
+Mov P1
+EndIf
+If CCMD2$="10X+" Then
+P1 = P_Curr
+P1.X = P1.X + 10
+Mov P1
+EndIf
+If CCMD2$="15X+" Then
+P1 = P_Curr
+P1.X = P1.X + 15
+Mov P1
+EndIf
+If CCMD2$="1X-" Then
+P1 = P_Curr
+P1.X = P1.X - 1
+Mov P1
+EndIf
+If CCMD2$="2X-" Then
+P1 = P_Curr
+P1.X = P1.X - 2
+Mov P1
+EndIf
+If CCMD2$="3X-" Then
+P1 = P_Curr
+P1.X = P1.X - 3
+Mov P1
+EndIf
+If CCMD2$="5X-" Then
+P1 = P_Curr
+P1.X = P1.X - 5
+Mov P1
+EndIf
+If CCMD2$="10X-" Then
+P1 = P_Curr
+P1.X = P1.X - 10
+Mov P1
+EndIf
+If CCMD2$="15X-" Then
+P1 = P_Curr
+P1.X = P1.X - 15
+Mov P1
+EndIf
+'MOV Y
+If CCMD2$="1Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 1
+Mov P1
+EndIf
+If CCMD2$="2Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 2
+Mov P1
+EndIf
+If CCMD2$="3Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 3
+Mov P1
+EndIf
+If CCMD2$="5Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 5
+Mov P1
+EndIf
+If CCMD2$="10Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 10
+Mov P1
+EndIf
+If CCMD2$="15Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 15
+Mov P1
+EndIf
+If CCMD2$="1Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 1
+Mov P1
+EndIf
+If CCMD2$="2Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 2
+Mov P1
+EndIf
+If CCMD2$="3Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 3
+Mov P1
+EndIf
+If CCMD2$="5Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 5
+Mov P1
+EndIf
+If CCMD2$="10Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 10
+Mov P1
+EndIf
+If CCMD2$="15Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 15
+Mov P1
+EndIf
+'MOV Z
+If CCMD2$="1Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 1
+Mov P1
+EndIf
+If CCMD2$="2Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 2
+Mov P1
+EndIf
+If CCMD2$="3Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 3
+Mov P1
+EndIf
+If CCMD2$="5Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 5
+Mov P1
+EndIf
+If CCMD2$="10Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 10
+Mov P1
+EndIf
+If CCMD2$="15Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 15
+Mov P1
+EndIf
+If CCMD2$="1Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 1
+Mov P1
+EndIf
+If CCMD2$="2Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 2
+Mov P1
+EndIf
+If CCMD2$="3Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 3
+Mov P1
+EndIf
+If CCMD2$="5Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 5
+Mov P1
+EndIf
+If CCMD2$="10Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 10
+Mov P1
+EndIf
+If CCMD2$="15Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 15
+Mov P1
+EndIf
+'MOV A
+If CCMD2$="1A+" Then
+P1 = P_Curr
+P1.A = P1.A + Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(15)
+Mov P1
+EndIf
+If CCMD2$="1A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(15)
+Mov P1
+EndIf
+'MOV B
+If CCMD2$="1B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15B+" Then
+P1 = P_Curr
+P1.B = P1.B + Rad(15)
+Mov P1
+EndIf
+If CCMD2$="1B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(15)
+Mov P1
+EndIf
+'MOV C
+If CCMD2$="1C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(15)
+Mov P1
+EndIf
+If CCMD2$="1C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(15)
+Mov P1
+EndIf
+'
+'Mov L2+
+If CCMD2$="1L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 1
+    Mov P1
+EndIf
+If CCMD2$="2L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 2
+    Mov P1
+EndIf
+If CCMD2$="3L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 3
+    Mov P1
+EndIf
+If CCMD2$="5L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 5
+    Mov P1
+EndIf
+If CCMD2$="10L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 10
+    Mov P1
+EndIf
+If CCMD2$="15L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 15
+    Mov P1
+EndIf
+'Mov L2-
+If CCMD2$="1L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 1
+    Mov P1
+EndIf
+If CCMD2$="2L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 2
+    Mov P1
+EndIf
+If CCMD2$="3L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 3
+    Mov P1
+EndIf
+If CCMD2$="5L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 5
+    Mov P1
+EndIf
+If CCMD2$="10L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 10
+    Mov P1
+EndIf
+If CCMD2$="15L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 15
+    Mov P1
+EndIf
+Return

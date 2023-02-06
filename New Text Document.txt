@@ -1,0 +1,1466 @@
+GetM 1
+Clr 0
+Dly 0.1
+Open "COM4:" As #2
+Dly 2
+If M_Open(2) = 1 Then
+    Clr 1
+    Servo On
+    Ovrd 5
+    Cnt 1
+    GoTo *MAIN
+    *MAIN
+    Input #2,CCMD2$
+    If CCMD2$="READY" Then
+    Print #2, "READY OK"
+    EndIf
+    If CCMD2$="CLOSE" Then
+        Dly 1
+        Servo Off
+        GoTo *ENDPROCESS
+    EndIf
+    'Mov home
+    If CCMD2$="HOME" Then 'HOME
+    Mov PHOME
+    EndIf
+    If CCMD2$="PSAVE1" Then 'HOME
+    Mov PSAVE1
+    EndIf
+    If CCMD2$="PSAVE2" Then 'HOME
+    Mov PSAVE2
+    EndIf
+    If CCMD2$="PSAVE3" Then 'HOME
+    Mov PSAVE3
+    EndIf
+    If CCMD2$="PSAVE4" Then 'HOME
+    Mov PSAVP4
+    EndIf
+    If CCMD2$="PSAVE5" Then 'HOME
+    Mov PSAVE5
+    EndIf
+    If CCMD2$="PSAVE6" Then 'HOME
+    Mov PSAVE6
+    EndIf
+    'On xilanh
+    If CCMD2$="ON_XL1" Then
+    M_Out(17) = 1
+    EndIf
+    If CCMD2$="OFF_XL1" Then
+    M_Out(17) = 0
+    EndIf
+    If CCMD2$="ON_HU1" Then
+    M_Out(18) = 1
+    EndIf
+    If CCMD2$="OFF_HU1" Then
+    M_Out(18) = 0
+    EndIf
+    If CCMD2$="ON_XL2" Then
+    M_Out(19) = 1
+    EndIf
+    If CCMD2$="OFF_XL2" Then
+    M_Out(19) = 0
+    EndIf
+    If CCMD2$="ON_HU2" Then
+    M_Out(20) = 1
+    EndIf
+    If CCMD2$="OFF_HU2" Then
+    M_Out(20) = 0
+    EndIf
+'Mov Fixture
+ 'Fixture 1
+If CCMD2$="F11" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H11" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F12" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H12" Then
+Print #2, "No Position"
+EndIf
+'Fixture 2
+If CCMD2$="F21" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H21" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F22" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H22" Then
+Print #2, "No Position"
+EndIf
+'Fixture 3
+If CCMD2$="F31" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H31" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F32" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H32" Then
+Print #2, "No Position"
+EndIf
+'Fixture 4
+If CCMD2$="F41" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H41" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F42" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H42" Then
+Print #2, "No Position"
+EndIf
+'Fixture 5
+If CCMD2$="F51" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H51" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F52" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H52" Then
+Print #2, "No Position"
+EndIf
+'Fixture 6
+If CCMD2$="F61" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H61" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F62" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H62" Then
+Print #2, "No Position"
+EndIf
+'Fixture 7
+If CCMD2$="F71" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H71" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F72" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H72" Then
+Print #2, "No Position"
+EndIf
+'Fixture 8
+If CCMD2$="F81" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H81" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F82" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H82" Then
+Print #2, "No Position"
+EndIf
+'Fixture 9
+If CCMD2$="F91" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H91" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F92" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H92" Then
+Print #2, "No Position"
+EndIf
+'Fixture 10
+If CCMD2$="F101" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H101" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F102" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H102" Then
+Print #2, "No Position"
+EndIf
+'Fixture 11
+If CCMD2$="F111" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H111" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F112" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H112" Then
+Print #2, "No Position"
+EndIf
+'Fixture 12
+If CCMD2$="F121" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H121" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F122" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H122" Then
+Print #2, "No Position"
+EndIf
+'Fixture 13
+If CCMD2$="F131" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H131" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F132" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H132" Then
+Print #2, "No Position"
+EndIf
+'Fixture 14
+If CCMD2$="F141" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H141" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F142" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H142" Then
+Print #2, "No Position"
+EndIf
+'Fixture 15
+If CCMD2$="F151" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H151" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F152" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H152" Then
+Print #2, "No Position"
+EndIf
+'Fixture 16
+If CCMD2$="F161" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H161" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F162" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H162" Then
+Print #2, "No Position"
+EndIf
+'Fixture 17
+If CCMD2$="F171" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H171" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F172" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H172" Then
+Print #2, "No Position"
+EndIf
+'Fixture 18
+If CCMD2$="F181" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H181" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F182" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H182" Then
+Print #2, "No Position"
+EndIf
+'Fixture 19
+If CCMD2$="F191" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H191" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F192" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H192" Then
+Print #2, "No Position"
+EndIf
+'Fixture 20
+If CCMD2$="F201" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H201" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="F202" Then
+Print #2, "No Position"
+EndIf
+If CCMD2$="H202" Then
+Print #2, "No Position"
+EndIf
+'Ovrd
+If CCMD2$="3Ovrd" Then
+Ovrd 3
+EndIf
+If CCMD2$="5Ovrd" Then
+Ovrd 5
+EndIf
+If CCMD2$="10Ovrd" Then
+Ovrd 10
+EndIf
+If CCMD2$="15Ovrd" Then
+Ovrd 15
+EndIf
+If CCMD2$="20Ovrd" Then
+Ovrd 20
+EndIf
+If CCMD2$="30Ovrd" Then
+Ovrd 30
+EndIf
+'MOV X
+If CCMD2$="1X+" Then
+P1 = P_Curr
+P1.X = P1.X + 1
+Mov P1
+EndIf
+If CCMD2$="2X+" Then
+P1 = P_Curr
+P1.X = P1.X + 2
+Mov P1
+EndIf
+If CCMD2$="3X+" Then
+P1 = P_Curr
+P1.X = P1.X + 3
+Mov P1
+EndIf
+If CCMD2$="5X+" Then
+P1 = P_Curr
+P1.X = P1.X + 5
+Mov P1
+EndIf
+If CCMD2$="10X+" Then
+P1 = P_Curr
+P1.X = P1.X + 10
+Mov P1
+EndIf
+If CCMD2$="15X+" Then
+P1 = P_Curr
+P1.X = P1.X + 15
+Mov P1
+EndIf
+If CCMD2$="1X-" Then
+P1 = P_Curr
+P1.X = P1.X - 1
+Mov P1
+EndIf
+If CCMD2$="2X-" Then
+P1 = P_Curr
+P1.X = P1.X - 2
+Mov P1
+EndIf
+If CCMD2$="3X-" Then
+P1 = P_Curr
+P1.X = P1.X - 3
+Mov P1
+EndIf
+If CCMD2$="5X-" Then
+P1 = P_Curr
+P1.X = P1.X - 5
+Mov P1
+EndIf
+If CCMD2$="10X-" Then
+P1 = P_Curr
+P1.X = P1.X - 10
+Mov P1
+EndIf
+If CCMD2$="15X-" Then
+P1 = P_Curr
+P1.X = P1.X - 15
+Mov P1
+EndIf
+'MOV Y
+If CCMD2$="1Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 1
+Mov P1
+EndIf
+If CCMD2$="2Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 2
+Mov P1
+EndIf
+If CCMD2$="3Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 3
+Mov P1
+EndIf
+If CCMD2$="5Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 5
+Mov P1
+EndIf
+If CCMD2$="10Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 10
+Mov P1
+EndIf
+If CCMD2$="15Y+" Then
+P1 = P_Curr
+P1.Y = P1.Y + 15
+Mov P1
+EndIf
+If CCMD2$="1Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 1
+Mov P1
+EndIf
+If CCMD2$="2Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 2
+Mov P1
+EndIf
+If CCMD2$="3Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 3
+Mov P1
+EndIf
+If CCMD2$="5Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 5
+Mov P1
+EndIf
+If CCMD2$="10Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 10
+Mov P1
+EndIf
+If CCMD2$="15Y-" Then
+P1 = P_Curr
+P1.Y = P1.Y - 15
+Mov P1
+EndIf
+'MOV Z
+If CCMD2$="1Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 1
+Mov P1
+EndIf
+If CCMD2$="2Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 2
+Mov P1
+EndIf
+If CCMD2$="3Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 3
+Mov P1
+EndIf
+If CCMD2$="5Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 5
+Mov P1
+EndIf
+If CCMD2$="10Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 10
+Mov P1
+EndIf
+If CCMD2$="15Z+" Then
+P1 = P_Curr
+P1.Z = P1.Z + 15
+Mov P1
+EndIf
+If CCMD2$="1Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 1
+Mov P1
+EndIf
+If CCMD2$="2Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 2
+Mov P1
+EndIf
+If CCMD2$="3Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 3
+Mov P1
+EndIf
+If CCMD2$="5Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 5
+Mov P1
+EndIf
+If CCMD2$="10Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 10
+Mov P1
+EndIf
+If CCMD2$="15Z-" Then
+P1 = P_Curr
+P1.Z = P1.Z - 15
+Mov P1
+EndIf
+'MOV A
+If CCMD2$="1A+" Then
+P1 = P_Curr
+P1.A = P1.A + Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15A+" Then
+P1 = P_Curr
+P1.A = P1.A +  Rad(15)
+Mov P1
+EndIf
+If CCMD2$="1A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15A-" Then
+P1 = P_Curr
+P1.A = P1.A -  Rad(15)
+Mov P1
+EndIf
+'MOV B
+If CCMD2$="1B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10B+" Then
+P1 = P_Curr
+P1.B = P1.B +  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15B+" Then
+P1 = P_Curr
+P1.B = P1.B + Rad(15)
+Mov P1
+EndIf
+If CCMD2$="1B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15B-" Then
+P1 = P_Curr
+P1.B = P1.B -  Rad(15)
+Mov P1
+EndIf
+'MOV C
+If CCMD2$="1C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15C+" Then
+P1 = P_Curr
+P1.C = P1.C +  Rad(15)
+Mov P1
+EndIf
+If CCMD2$="1C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(1)
+Mov P1
+EndIf
+If CCMD2$="2C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(2)
+Mov P1
+EndIf
+If CCMD2$="3C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(3)
+Mov P1
+EndIf
+If CCMD2$="5C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(5)
+Mov P1
+EndIf
+If CCMD2$="10C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(10)
+Mov P1
+EndIf
+If CCMD2$="15C-" Then
+P1 = P_Curr
+P1.C = P1.C -  Rad(15)
+Mov P1
+EndIf
+'
+'
+'Mov L2+
+If CCMD2$="1L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 1
+    Mov P1
+EndIf
+If CCMD2$="2L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 2
+    Mov P1
+EndIf
+If CCMD2$="3L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 3
+    Mov P1
+EndIf
+If CCMD2$="5L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 5
+    Mov P1
+EndIf
+If CCMD2$="10L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 10
+    Mov P1
+EndIf
+If CCMD2$="15L2+" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 + 15
+    Mov P1
+EndIf
+'Mov L2-
+If CCMD2$="1L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 1
+    Mov P1
+EndIf
+If CCMD2$="2L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 2
+    Mov P1
+EndIf
+If CCMD2$="3L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 3
+    Mov P1
+EndIf
+If CCMD2$="5L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 5
+    Mov P1
+EndIf
+If CCMD2$="10L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 10
+    Mov P1
+EndIf
+If CCMD2$="15L2-" Then
+P1 = P_Curr
+    P1.L2 = P1.L2 - 15
+    Mov P1
+EndIf
+'
+'
+'
+'Mov Jog J1+
+If CCMD2$="1J1+" Then
+J0 = J_Curr
+If J0.J1 > -240 And J0.J1 < 239 Then
+    J0.J1 = J0.J1 + Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J1+" Then
+J0 = J_Curr
+If J0.J1 > -240 And J0.J1 < 238 Then
+    J0.J1 = J0.J1 + Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J1+" Then
+J0 = J_Curr
+If J0.J1 > -240 And J0.J1 < 237 Then
+    J0.J1 = J0.J1 + Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J1+" Then
+J0 = J_Curr
+If J0.J1 > -240 And J0.J1 < 235 Then
+    J0.J1 = J0.J1 + Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J1+" Then
+J0 = J_Curr
+If J0.J1 > -240 And J0.J1 < 230 Then
+    J0.J1 = J0.J1 + Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J1+" Then
+J0 = J_Curr
+If J0.J1 > -240 And J0.J1 < 225 Then
+    J0.J1 = J0.J1 + Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'Mov J1-
+If CCMD2$="1J1-" Then
+J0 = J_Curr
+If J0.J1 > -239 And J0.J1 < 240 Then
+    J0.J1 = J0.J1 - Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J1-" Then
+J0 = J_Curr
+If J0.J1 > -238 And J0.J1 < 240 Then
+    J0.J1 = J0.J1 - Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J1-" Then
+J0 = J_Curr
+If J0.J1 > -237 And J0.J1 < 240 Then
+    J0.J1 = J0.J1 - Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J1-" Then
+J0 = J_Curr
+If J0.J1 > -235 And J0.J1 < 240 Then
+    J0.J1 = J0.J1 - Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J1-" Then
+J0 = J_Curr
+If J0.J1 > -230 And J0.J1 < 240 Then
+    J0.J1 = J0.J1 - Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J1-" Then
+J0 = J_Curr
+If J0.J1 > -235 And J0.J1 < 240 Then
+    J0.J1 = J0.J1 - Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'
+'
+'
+'Mov Jog J2+
+If CCMD2$="1J2+" Then
+J0 = J_Curr
+If J0.J2 > -110 And J0.J2 < 129 Then
+    J0.J2 = J0.J2 + Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J2+" Then
+J0 = J_Curr
+If J0.J2 > -110 And J0.J2 < 128 Then
+    J0.J2 = J0.J2 + Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J2+" Then
+J0 = J_Curr
+If J0.J2 > -110 And J0.J2 < 127 Then
+    J0.J2 = J0.J2 + Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J2+" Then
+J0 = J_Curr
+If J0.J2 > -110 And J0.J2 < 125 Then
+    J0.J2 = J0.J2 + Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J2+" Then
+J0 = J_Curr
+If J0.J2 > -110 And J0.J2 < 120 Then
+    J0.J2 = J0.J2 + Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J2+" Then
+J0 = J_Curr
+If J0.J2 > -110 And J0.J2 < 115 Then
+    J0.J2 = J0.J2 + Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'Mov J2-
+If CCMD2$="1J2-" Then
+J0 = J_Curr
+If J0.J2 > -109 And J0.J2 < 130 Then
+    J0.J2 = J0.J2 - Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J2-" Then
+J0 = J_Curr
+If J0.J2 > -108 And J0.J2 < 130 Then
+    J0.J2 = J0.J2 - Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J2-" Then
+J0 = J_Curr
+If J0.J2 > -107 And J0.J2 < 130 Then
+    J0.J2 = J0.J2 - Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J2-" Then
+J0 = J_Curr
+If J0.J2 > -105 And J0.J2 < 130 Then
+    J0.J2 = J0.J2 - Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J2-" Then
+J0 = J_Curr
+If J0.J2 > -100 And J0.J2 < 130 Then
+    J0.J2 = J0.J2 - Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J2-" Then
+J0 = J_Curr
+If J0.J2 > -95 And J0.J2 < 130 Then
+    J0.J2 = J0.J2 - Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'
+'
+'
+'Mov Jog J3+
+If CCMD2$="1J3+" Then
+J0 = J_Curr
+If J0.J3 > 0 And J0.J3 < 161 Then
+    J0.J3 = J0.J3 + Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J3+" Then
+J0 = J_Curr
+If J0.J3 > 0 And J0.J3 < 160 Then
+    J0.J3 = J0.J3 + Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J3+" Then
+J0 = J_Curr
+If J0.J3 > 0 And J0.J3 < 159 Then
+    J0.J3 = J0.J3 + Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J3+" Then
+J0 = J_Curr
+If J0.J3 > 0 And J0.J3 < 157 Then
+    J0.J3 = J0.J3 + Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J3+" Then
+J0 = J_Curr
+If J0.J3 > 0 And J0.J3 < 152 Then
+    J0.J3 = J0.J3 + Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J3+" Then
+J0 = J_Curr
+If J0.J3 > 0 And J0.J3 < 147 Then
+    J0.J3 = J0.J3 + Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'Mov J3-
+If CCMD2$="1J3-" Then
+J0 = J_Curr
+If J0.J3 > 1 And J0.J3 < 162 Then
+    J0.J3 = J0.J3 - Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J3-" Then
+J0 = J_Curr
+If J0.J3 > 2 And J0.J3 < 162 Then
+    J0.J3 = J0.J3 - Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J3-" Then
+J0 = J_Curr
+If J0.J3 > 3 And J0.J3 < 162 Then
+    J0.J3 = J0.J3 - Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J3-" Then
+J0 = J_Curr
+If J0.J3 > 5 And J0.J3 < 162 Then
+    J0.J3 = J0.J3 - Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J3-" Then
+J0 = J_Curr
+If J0.J3 > 10 And J0.J3 < 162 Then
+    J0.J3 = J0.J3 - Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J3-" Then
+J0 = J_Curr
+If J0.J3 > 15 And J0.J3 < 162 Then
+    J0.J3 = J0.J3 - Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'
+'
+'
+'Mov Jog J4+
+If CCMD2$="1J4+" Then
+J0 = J_Curr
+If J0.J4 > -200 And J0.J4 < 199 Then
+    J0.J4 = J0.J4 + Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J4+" Then
+J0 = J_Curr
+If J0.J4 > -200 And J0.J4 < 198 Then
+    J0.J4 = J0.J4 + Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J4+" Then
+J0 = J_Curr
+If J0.J4 > -200 And J0.J4 < 197 Then
+    J0.J4 = J0.J4 + Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J4+" Then
+J0 = J_Curr
+If J0.J4 > -200 And J0.J4 < 195 Then
+    J0.J4 = J0.J4 + Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J4+" Then
+J0 = J_Curr
+If J0.J4 > -200 And J0.J4 < 190 Then
+    J0.J4 = J0.J4 + Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J4+" Then
+J0 = J_Curr
+If J0.J4 > -200 And J0.J4 < 185 Then
+    J0.J4 = J0.J4 + Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'Mov J4-
+If CCMD2$="1J4-" Then
+J0 = J_Curr
+If J0.J4 > -199 And J0.J4 < 200 Then
+    J0.J4 = J0.J4 - Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J4-" Then
+J0 = J_Curr
+If J0.J4 > -198 And J0.J4 < 200 Then
+    J0.J4 = J0.J4 - Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J4-" Then
+J0 = J_Curr
+If J0.J4 > -197 And J0.J4 < 200 Then
+    J0.J4 = J0.J4 - Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J4-" Then
+J0 = J_Curr
+If J0.J4 > -195 And J0.J4 < 200 Then
+    J0.J4 = J0.J4 - Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J4-" Then
+J0 = J_Curr
+If J0.J4 > -190 And J0.J4 < 200 Then
+    J0.J4 = J0.J4 - Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J4-" Then
+J0 = J_Curr
+If J0.J4 > -185 And J0.J4 < 200 Then
+    J0.J4 = J0.J4 - Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'
+'
+'
+'Mov Jog J5+
+If CCMD2$="1J5+" Then
+J0 = J_Curr
+If J0.J5 > -120 And J0.J5 < 119 Then
+    J0.J5 = J0.J5 + Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J5+" Then
+J0 = J_Curr
+If J0.J5 > -120 And J0.J5 < 118 Then
+    J0.J5 = J0.J5 + Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J5+" Then
+J0 = J_Curr
+If J0.J5 > -120 And J0.J5 < 117 Then
+    J0.J5 = J0.J5 + Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J5+" Then
+J0 = J_Curr
+If J0.J5 > -120 And J0.J5 < 115 Then
+    J0.J5 = J0.J5 + Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J5+" Then
+J0 = J_Curr
+If J0.J5 > -120 And J0.J5 < 110 Then
+    J0.J5 = J0.J5 + Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J5+" Then
+J0 = J_Curr
+If J0.J5 > -120 And J0.J5 < 105 Then
+    J0.J5 = J0.J5 + Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'Mov J5-
+If CCMD2$="1J5-" Then
+J0 = J_Curr
+If J0.J5 > -119 And J0.J5 < 120 Then
+    J0.J5 = J0.J5 - Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J5-" Then
+J0 = J_Curr
+If J0.J5 > -118 And J0.J5 < 120 Then
+    J0.J5 = J0.J5 - Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J5-" Then
+J0 = J_Curr
+If J0.J5 > -117 And J0.J5 < 120 Then
+    J0.J5 = J0.J5 - Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J5-" Then
+J0 = J_Curr
+If J0.J5 > -115 And J0.J5 < 120 Then
+    J0.J5 = J0.J5 - Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J5-" Then
+J0 = J_Curr
+If J0.J5 > -110 And J0.J5 < 120 Then
+    J0.J5 = J0.J5 - Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J5-" Then
+J0 = J_Curr
+If J0.J5 > -105 And J0.J5 < 120 Then
+    J0.J5 = J0.J5 - Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'
+'
+'
+'Mov Jog J6+
+If CCMD2$="1J6+" Then
+J0 = J_Curr
+If J0.J6 > -360 And J0.J6 < 359 Then
+    J0.J6 = J0.J6 + Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J6+" Then
+J0 = J_Curr
+If J0.J6 > -360 And J0.J6 < 358 Then
+    J0.J6 = J0.J6 + Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J6+" Then
+J0 = J_Curr
+If J0.J6 > -360 And J0.J6 < 357 Then
+    J0.J6 = J0.J6 + Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J6+" Then
+J0 = J_Curr
+If J0.J6 > -360 And J0.J6 < 355 Then
+    J0.J6 = J0.J6 + Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J6+" Then
+J0 = J_Curr
+If J0.J6 > -360 And J0.J6 < 350 Then
+    J0.J6 = J0.J6 + Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J6+" Then
+J0 = J_Curr
+If J0.J6 > -360 And J0.J6 < 345 Then
+    J0.J6 = J0.J6 + Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+'Mov J6-
+If CCMD2$="1J6-" Then
+J0 = J_Curr
+If J0.J6 > -359 And J0.J6 < 360 Then
+    J0.J6 = J0.J6 - Rad(1)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="2J6-" Then
+J0 = J_Curr
+If J0.J6 > -358 And J0.J6 < 360 Then
+    J0.J6 = J0.J6 - Rad(2)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="3J6-" Then
+J0 = J_Curr
+If J0.J6 > -357 And J0.J6 < 360 Then
+    J0.J6 = J0.J6 - Rad(3)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="5J6-" Then
+J0 = J_Curr
+If J0.J6 > -355 And J0.J6 < 360 Then
+    J0.J6 = J0.J6 - Rad(5)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="10J6-" Then
+J0 = J_Curr
+If J0.J6 > -350 And J0.J6 < 360 Then
+    J0.J6 = J0.J6 - Rad(10)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+If CCMD2$="15J6-" Then
+J0 = J_Curr
+If J0.J6 > -345 And J0.J6 < 360 Then
+    J0.J6 = J0.J6 - Rad(15)
+    Mov J0
+Else
+    Print #2, "Over Position"
+EndIf
+EndIf
+CCMD2$=""
+    GoSub *MAIN
+    Return
+Else
+    Close #2
+    RelM
+EndIf
+*ENDPROCESS
+Close #2
+End
